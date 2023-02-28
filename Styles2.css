@@ -10,7 +10,7 @@
                     'menu main main main main login';
     gap:2px;
     padding:1px;
-    background-color: aqua;
+    background-color: white;
 }
 .container > div {
     background-color: rgba(255, 255, 255, 0.8);
@@ -61,7 +61,7 @@
     grid-template-areas: 'img data data';
     gap:2px;
     padding:3px;
-    background-color:whitesmoke;
+    background-color:white;
 }
 
 #navDec{
@@ -102,4 +102,9 @@
 .price h4{
     margin-top: 2px;
     margin-bottom: 0%;
+}
+.main{
+	height: 500px;
+	white-space: nowrap;
+	overflow-y: scroll;
 }
