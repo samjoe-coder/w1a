@@ -1,0 +1,105 @@
+.menu { grid-area: menu; }
+.main { grid-area: main; }
+.login { grid-area: login; }
+.navigation { grid-area: navigation; }
+.decs{grid-area: decs;}
+.container{
+    display:grid;
+    grid-template-areas: 'header header header header header header'
+                    'navigation navigation navigation navigation navigation navigation'
+                    'menu main main main main login';
+    gap:2px;
+    padding:1px;
+    background-color: aqua;
+}
+.container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+}
+
+.header {
+    grid-area: header;
+    background-color: whitesmoke;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.header img {
+    width: 100px;
+    margin-right: 20px;
+    margin-left: 5px;
+}
+
+.header h1 {
+    margin: 0 auto;
+    font-size: 35px;
+}
+.menu a{
+    display: block;
+    line-height: 6em;
+    text-align: left;
+    padding-left: 1em;
+}
+
+.navigation a{
+
+    text-align: right;
+    padding-left: 1em;
+}
+/* .main p{
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+} */
+
+.catalogue{
+    display: grid;
+    grid-template-areas: 'img data data';
+    gap:2px;
+    padding:3px;
+    background-color:whitesmoke;
+}
+
+#navDec{
+    text-decoration: none;
+}
+#imgId{
+    height: 150px;
+    width: 100px;
+    margin-left: 10px;
+    margin-top: 14px;
+    margin-bottom: 5px;
+}
+.info{
+    display: grid;
+    grid-template-areas: 'title' 'decs' 'price';
+    /* background-color: blueviolet; */
+    padding: none;
+    height: 50px;
+}
+.moreDetails{
+    margin-top: 80px;
+}
+.decs{
+    display: grid;
+    grid-template-areas: 'publisher' 'author' 'review';
+    /* background-color: burlywood; */
+    padding: none;
+    height: 100px;
+}
+.title h2{
+    margin-top: 2px;
+    margin-bottom: 0%;
+}
+.decs h3 ,h5{
+    margin-top: 2px;
+    margin-bottom: 0%;
+}
+.price h4{
+    margin-top: 2px;
+    margin-bottom: 0%;
+}
