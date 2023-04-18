@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Form</title>
+    <script>
+        function saveLogin() {
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+  
+  // retrieve existing logins or initialize an empty array
+  var localLogins = JSON.parse(localStorage.getItem("localLogins") || "[]");
+  
+  // add the new login to the array
+  localLogins.push({ username: username, password: password });
+  
+  // store the updated array back in localStorage
+  localStorage.setItem("localLogins", JSON.stringify(localLogins));
+}
+
+function retrieveLogin() {
+  // retrieve all logins from localStorage
+  var localLogins = JSON.parse(localStorage.getItem("localLogins") || "[]");
+  
+  loginList.innerHTML = "";
+  // display each login in a separate alert dialog
+  localLogins.forEach(function(login) {
+    // alert("Username: " + login.username + "\nPassword: " + login.password)
+          loginList.innerHTML += "Username: " + login.username + ", Password: " + login.password + "<br>";
+  });
+}
+
+    </script>
+  </head>
+  <body>
+    <h1>Login Form</h1>
+    <form>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username"><br><br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password"><br><br>
+      <button type="button" onclick="saveLogin()">Save Login</button>
+      <button type="button" onclick="retrieveLogin()">Retrieve Login</button>
+    </form>
+    <h3 id="loginList"></h3>
+    <body>
+</html>
